@@ -1,0 +1,71 @@
+"use client";
+import React from 'react';
+import { Twitter, Instagram, Github, Mail } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer style={{
+      padding: '80px 20px 40px 20px',
+      borderTop: '1px solid var(--glass-border)',
+      marginTop: '100px',
+    }}>
+      <div style={{
+        maxWidth: '1200px',
+        margin: '0 auto',
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+        gap: '40px',
+        marginBottom: '60px',
+      }}>
+        <div>
+          <div style={{ fontSize: '24px', fontWeight: 800, marginBottom: '20px' }}>
+            Grow<span className="gradient-text">X</span>
+          </div>
+          <p style={{ color: 'var(--text-muted)', lineHeight: 1.6 }}>
+            Empowering the next generation of investors with smart, automated wealth management tools.
+          </p>
+        </div>
+        
+        <div>
+          <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Platform</h4>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>How it Works</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Benefits</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Security</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Pricing</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Support</h4>
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Help Center</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Contact Us</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Privacy Policy</a></li>
+            <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Terms of Service</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Connect</h4>
+          <div style={{ display: 'flex', gap: '15px' }}>
+            <a href="#" style={{ color: 'var(--text-muted)' }}><Twitter size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-muted)' }}><Instagram size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-muted)' }}><Github size={20} /></a>
+            <a href="#" style={{ color: 'var(--text-muted)' }}><Mail size={20} /></a>
+          </div>
+        </div>
+      </div>
+      
+      <div style={{
+        textAlign: 'center',
+        paddingTop: '40px',
+        borderTop: '1px solid rgba(255,255,255,0.05)',
+        color: 'rgba(255,255,255,0.3)',
+        fontSize: '14px'
+      }}>
+        © {new Date().getFullYear()} GrowX Inc. All rights reserved.
+      </div>
+    </footer>
+  );
+}
