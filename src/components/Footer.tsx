@@ -25,7 +25,7 @@ export default function Footer() {
             Empowering the next generation of investors with smart, automated wealth management tools.
           </p>
         </div>
-        
+
         <div>
           <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Platform</h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -35,7 +35,7 @@ export default function Footer() {
             <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Pricing</a></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Support</h4>
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -45,18 +45,18 @@ export default function Footer() {
             <li><a href="#" style={{ color: 'var(--text-muted)', fontSize: '14px' }}>Terms of Service</a></li>
           </ul>
         </div>
-        
+
         <div>
           <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Connect</h4>
           <div style={{ display: 'flex', gap: '15px' }}>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Twitter size={20} /></a>
-            <a href="#" style={{ color: 'var(--text-muted)' }}><Instagram size={20} /></a>
+            <a href="https://www.instagram.com/grow_x217?igsh=NHp0MjJtaHZkbzlt&utm_source=qr" style={{ color: 'var(--text-muted)' }}><Instagram size={20} /></a>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Github size={20} /></a>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Mail size={20} /></a>
           </div>
         </div>
       </div>
-      
+
       <div style={{
         textAlign: 'center',
         paddingTop: '40px',

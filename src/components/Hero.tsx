@@ -13,8 +13,8 @@ export default function Hero() {
         transition={{ duration: 0.6 }}
         className="hero-badge"
       >
-        <TrendingUp size={16} /> 
-        <span>New: Get 10% monthly returns guaranteed</span>
+        <TrendingUp size={16} />
+        <span>New: Get 6% monthly returns guaranteed</span>
       </motion.div>
 
       {/* Main Heading */}
@@ -58,9 +58,9 @@ export default function Hero() {
         className="mockup-container"
       >
         <div className="glow-effect"></div>
-        <img 
-          src="/hero-mockup.png" 
-          alt="GrowX App" 
+        <img
+          src="/hero-mockup.png"
+          alt="GrowX App"
           className="hero-img"
         />
       </motion.div>
