@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const features = [
   {
     icon: <CircleDollarSign size={32} />,
-    title: "10% Monthly Returns",
+    title: "6% Monthly Returns",
     description: "Our proprietary AI-driven strategies consistently deliver high yield returns for our user base."
   },
   {

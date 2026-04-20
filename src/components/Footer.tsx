@@ -50,7 +50,7 @@ export default function Footer() {
           <h4 style={{ fontSize: '18px', fontWeight: 700, marginBottom: '20px' }}>Connect</h4>
           <div style={{ display: 'flex', gap: '15px' }}>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Twitter size={20} /></a>
-            <a href="https://www.instagram.com/grow_x217?igsh=NHp0MjJtaHZkbzlt&utm_source=qr" style={{ color: 'var(--text-muted)' }}><Instagram size={20} /></a>
+            <a href="https://www.instagram.com/grow_x217?igsh=NHp0MjJtaHZkbzlt&utm_source=qr" style={{ color: 'var(--text-muted)' }} target='_blank'><Instagram size={20} /></a>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Github size={20} /></a>
             <a href="#" style={{ color: 'var(--text-muted)' }}><Mail size={20} /></a>
           </div>

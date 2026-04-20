@@ -13,9 +13,10 @@ export default function Navbar() {
           </div>
           
           {/* Action Section */}
-          <button className="btn-download">
-            <span className="btn-text">Download</span>
-            <Download size={18} strokeWidth={2.5} />
+          <button className="btn-download"><a href="/grow_x.apk" download className="btn-download">
+  <span className="btn-text">Download</span>
+  <Download size={18} strokeWidth={2.5} />
+</a>
           </button>
         </div>
       </nav>
