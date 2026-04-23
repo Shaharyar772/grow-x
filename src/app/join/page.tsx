@@ -8,7 +8,9 @@ import { Copy, Check, Download, ArrowRight, Sparkles, TrendingUp } from 'lucide-
 function JoinContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const ref = searchParams.get('ref');
+  const refParam = searchParams.get('ref');
+  const [referralCode, setReferralCode] = useState<string | null>(null);
+  const [hasCode, setHasCode] = useState(false);
   const [copied, setCopied] = useState(false);
   const [downloadStarted, setDownloadStarted] = useState(false);
   const isMounted = useRef(false);
@@ -16,8 +18,15 @@ function JoinContent() {
   useEffect(() => {
     isMounted.current = true;
     
-    if (ref) {
-      localStorage.setItem('referralCode', ref);
+    const storedCode = localStorage.getItem('referralCode');
+    
+    if (refParam) {
+      setReferralCode(refParam);
+      setHasCode(true);
+      localStorage.setItem('referralCode', refParam);
+    } else if (storedCode) {
+      setReferralCode(storedCode);
+      setHasCode(true);
     }
 
     const downloadTimeout = setTimeout(() => {
@@ -35,11 +44,11 @@ function JoinContent() {
       isMounted.current = false;
       clearTimeout(downloadTimeout);
     };
-  }, [ref]);
+  }, [refParam]);
 
   const copyToClipboard = () => {
-    if (ref) {
-      navigator.clipboard.writeText(ref);
+    if (referralCode) {
+      navigator.clipboard.writeText(referralCode);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
@@ -83,7 +92,7 @@ function JoinContent() {
           </h1>
           
           <p className="subtitle">
-            Your secure download is starting. Copy your code below to claim your sign-up bonus.
+            {hasCode ? 'Your referral code is ready! Copy it to claim your sign-up bonus.' : 'Loading your referral code...'}
           </p>
         </div>
 
@@ -93,6 +102,13 @@ function JoinContent() {
           className="main-card"
         >
           <div className="card-inner">
+            {!hasCode ? (
+              <div className="loading-code-section">
+                <div className="code-skeleton"></div>
+                <div className="copy-skeleton"></div>
+              </div>
+            ) : (
+            <>
             <div className="card-header">
               <p className="label">Referral Code</p>
               <div className="bonus-badge">
@@ -103,7 +119,7 @@ function JoinContent() {
             
             <div className="code-section">
               <div className="code-display">
-                {ref || 'GROWX-777'}
+                {hasCode ? referralCode : 'GROWX-777'}
               </div>
 
               <button 
@@ -140,6 +156,8 @@ function JoinContent() {
                 </motion.p>
               )}
             </AnimatePresence>
+            </>
+            )}
           </div>
         </motion.div>
 
@@ -424,6 +442,28 @@ function JoinContent() {
           background: #00ffa3;
           border-radius: 50%;
           animation: ping 1s infinite;
+        }
+
+        .loading-code-section {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .code-skeleton {
+          width: 100%;
+          height: 48px;
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          animation: pulse 1.5s infinite;
+        }
+
+        .copy-skeleton {
+          width: 100%;
+          height: 48px;
+          background: rgba(255, 255, 255, 0.08);
+          border-radius: 16px;
+          animation: pulse 1.5s infinite;
         }
 
         @keyframes ping {
