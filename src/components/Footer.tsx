@@ -59,14 +59,6 @@ export default function Footer() {
 
       <div className="footer-bottom">
         <p className="copyright">© 2026 GrowX Inc. All rights reserved.</p>
-        <a 
-          href="https://www.devloperz.com/" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="developer-link"
-        >
-          Developed by <span className="dev-name">devloperz</span>
-        </a>
       </div>
 
       <style jsx>{`
