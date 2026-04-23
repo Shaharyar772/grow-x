@@ -44,9 +44,9 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.6 }}
         className="hero-cta"
       >
-        <button className="btn-primary-hero">
+        <a href="/grow_x.apk" download className="btn-primary-hero">
           Download App <Download size={20} />
-        </button>
+        </a>
       </motion.div>
       <div className='mb-6'></div>
 
@@ -131,6 +131,8 @@ export default function Hero() {
           gap: 10px;
           cursor: pointer;
           transition: transform 0.2s;
+          position: relative;
+          z-index: 10;
         }
 
         .btn-glass-hero {

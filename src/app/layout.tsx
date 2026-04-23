@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import LoadingWrapper from "@/components/LoadingWrapper";
 
 export const metadata: Metadata = {
   title: "GrowX | Invest & Multiply Your Wealth",
@@ -14,11 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
-        <div className="bg-glow">
-          <div className="orb orb-1"></div>
-          <div className="orb orb-2"></div>
-        </div>
-        {children}
+        <LoadingWrapper>
+          <div className="bg-glow">
+            <div className="orb orb-1"></div>
+            <div className="orb orb-2"></div>
+          </div>
+          {children}
+        </LoadingWrapper>
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import { Shield, Zap, CircleDollarSign, Headset } from 'lucide-react';
+import { Shield, Zap, CircleDollarSign, Headset, PieChart, Globe } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const features = [
@@ -15,9 +15,19 @@ const features = [
     description: "Your funds are protected with end-to-end encryption and multi-sig wallet security protocols."
   },
   {
+    icon: <PieChart size={32} />,
+    title: "AI Portfolio Optmization",
+    description: "Smart algorithms that analyze market trends 24/7 to optimize your investment portfolio in real-time."
+  },
+  {
     icon: <Zap size={32} />,
     title: "Instant Withdrawals",
     description: "Access your money whenever you need it. No lock-in periods, no hidden fees, instant processing."
+  },
+  {
+    icon: <Globe size={32} />,
+    title: "Global Access",
+    description: "Invest from anywhere in the world with multi-currency support and seamless cross-border transfers."
   },
   {
     icon: <Headset size={32} />,

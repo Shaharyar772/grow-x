@@ -16,7 +16,7 @@ const steps = [
   {
     number: "03",
     title: "Start Growing",
-    description: "Choose an investment plan and watch your wealth grow with 10% monthly returns."
+    description: "Choose an investment plan and watch your wealth grow with 6% monthly returns."
   }
 ];
 

@@ -57,15 +57,59 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{
-        textAlign: 'center',
-        paddingTop: '40px',
-        borderTop: '1px solid rgba(255,255,255,0.05)',
-        color: 'rgba(255,255,255,0.3)',
-        fontSize: '14px'
-      }}>
-        © {new Date().getFullYear()} GrowX Inc. All rights reserved.
+      <div className="footer-bottom">
+        <p className="copyright">© 2026 GrowX Inc. All rights reserved.</p>
+        <a 
+          href="https://www.devloperz.com/" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="developer-link"
+        >
+          Developed by <span className="dev-name">devloperz</span>
+        </a>
       </div>
+
+      <style jsx>{`
+        .footer-bottom {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 12px;
+          padding-top: 40px;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          text-align: center;
+        }
+
+        .copyright {
+          color: rgba(255, 255, 255, 0.3);
+          font-size: 14px;
+          font-weight: 500;
+          letter-spacing: 0.02em;
+        }
+
+        .developer-link {
+          color: rgba(255, 255, 255, 0.2);
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+
+        .developer-link:hover {
+          color: rgba(255, 255, 255, 0.5);
+          transform: translateY(-1px);
+        }
+
+        .dev-name {
+          color: #6366f1;
+          text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+        }
+      `}</style>
     </footer>
   );
 }

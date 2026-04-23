@@ -13,11 +13,10 @@ export default function Navbar() {
           </div>
           
           {/* Action Section */}
-          <button className="btn-download"><a href="/grow_x.apk" download className="btn-download">
-  <span className="btn-text">Download</span>
-  <Download size={18} strokeWidth={2.5} />
-</a>
-          </button>
+          <a href="/grow_x.apk" download className="btn-download">
+            <span className="btn-text">Download</span>
+            <Download size={18} strokeWidth={2.5} />
+          </a>
         </div>
       </nav>
 
@@ -36,7 +35,7 @@ export default function Navbar() {
           -webkit-backdrop-filter: blur(12px);
           border: 1px solid rgba(255, 255, 255, 0.1);
           border-radius: 100px;
-          padding: 10px 20px;
+          padding: 15px 20px;
           transition: all 0.3s ease;
         }
 
