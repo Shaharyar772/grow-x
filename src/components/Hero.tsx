@@ -16,7 +16,7 @@ export default function Hero() {
           <History size={14} />
           <span>Trusted for 5+ Years</span>
         </div>
-        <div className='mt-1'></div>
+        <div className='p-6'></div>
         <div className="hero-badge">
           <TrendingUp size={16} />
           <span>6% monthly returns</span>

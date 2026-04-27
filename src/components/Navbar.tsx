@@ -37,10 +37,10 @@ export default function Navbar() {
           max-width: 1100px;
           z-index: 1000;
           /* Glassmorphism Effect */
-          background: rgba(255, 255, 255, 0.05);
+          background: black;
           backdrop-filter: blur(12px);
           -webkit-backdrop-filter: blur(12px);
-          border: 1px solid rgba(255, 255, 255, 0.1);
+          border: 4px solid rgba(21, 15, 43, 0.9);
           border-radius: 100px;
           padding: 15px 20px;
           transition: all 0.3s ease;
