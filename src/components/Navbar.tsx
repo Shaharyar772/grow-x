@@ -11,6 +11,13 @@ export default function Navbar() {
           <div className="logo">
             Grow<span className="gradient-text">X</span>
           </div>
+
+          {/* Desktop Links */}
+          <div className="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it Works</a>
+            <a href="#plans">Plans</a>
+          </div>
           
           {/* Action Section */}
           <a href="/grow_x.apk" download className="btn-download">
@@ -54,6 +61,23 @@ export default function Navbar() {
           cursor: pointer;
         }
 
+        .nav-links {
+          display: flex;
+          gap: 30px;
+        }
+
+        .nav-links a {
+          color: rgba(255, 255, 255, 0.6);
+          text-decoration: none;
+          font-size: 14px;
+          font-weight: 500;
+          transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+          color: white;
+        }
+
         .gradient-text {
           background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
           -webkit-background-clip: text;
@@ -93,6 +117,10 @@ export default function Navbar() {
           
           .logo {
             font-size: 18px;
+          }
+
+          .nav-links {
+            display: none;
           }
 
           .btn-text {

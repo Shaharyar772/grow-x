@@ -1,20 +1,26 @@
 "use client";
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Download, TrendingUp } from 'lucide-react';
+import { ChevronRight, Download, TrendingUp, History } from 'lucide-react';
 
 export default function Hero() {
   return (
     <section className="hero-section">
-      {/* Badge */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="hero-badge"
+        className="hero-badge-group"
       >
-        <TrendingUp size={16} />
-        <span>New: Get 6% monthly returns guaranteed</span>
+        <div className="hero-badge trust-badge">
+          <History size={14} />
+          <span>Trusted for 5+ Years</span>
+        </div>
+        <div className='mt-1'></div>
+        <div className="hero-badge">
+          <TrendingUp size={16} />
+          <span>6% monthly returns</span>
+        </div>
       </motion.div>
 
       {/* Main Heading */}
@@ -34,7 +40,7 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.4 }}
         className="hero-subtitle"
       >
-        Join 50,000+ investors using GrowX to multiply their savings with secure, automated investment strategies.
+        Join 50,000+ investors who have been growing their wealth with GrowX since 2019. Secure, automated, and consistent.
       </motion.p>
 
       {/* Buttons */}
@@ -76,17 +82,30 @@ export default function Hero() {
           overflow: hidden;
         }
 
+        .hero-badge-group {
+          display: flex;
+          gap: 12px;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
         .hero-badge {
           padding: 8px 16px;
           border-radius: 100px;
-          background: rgba(0, 255, 163, 0.08);
-          border: 1px solid rgba(0, 255, 163, 0.2);
-          color: #00ffa3;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.8);
           font-size: 14px;
           font-weight: 600;
           display: flex;
           align-items: center;
           gap: 8px;
+        }
+
+        .trust-badge {
+          background: rgba(99, 102, 241, 0.1);
+          border: 1px solid rgba(99, 102, 241, 0.2);
+          color: #818cf8;
         }
 
         .hero-title {
