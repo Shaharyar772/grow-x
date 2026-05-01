@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import LoadingWrapper from "@/components/LoadingWrapper";
+import TelegramButton from "@/components/TelegramButton";
+
 
 export const metadata: Metadata = {
   title: "GrowX | Invest & Multiply Your Wealth",
@@ -21,7 +23,9 @@ export default function RootLayout({
             <div className="orb orb-2"></div>
           </div>
           {children}
+          <TelegramButton />
         </LoadingWrapper>
+
       </body>
     </html>
   );

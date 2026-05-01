@@ -8,12 +8,15 @@ import Plan from "@/components/Plan";
 import Stats from "@/components/Stats";
 import TrustStatement from "@/components/TrustStatement";
 
+
+
+
 export default function Home() {
   return (
     <main>
       <Navbar />
       <Hero />
-      
+
       <TrustStatement />
       
       <Stats />
